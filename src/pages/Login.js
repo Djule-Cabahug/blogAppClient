@@ -19,7 +19,7 @@ export default function Login() {
 
         // Prevents page redirection via form submission
         e.preventDefault();
-        fetch(`http://localhost:4000/users/login`, {
+        fetch(`https://blogappserver-tag3.onrender.com/users/login`, {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
@@ -65,7 +65,7 @@ export default function Login() {
     function retrieveUserDetails(token){
         //The token will be sent as part of the request's header information
         //We put "Bearer" in front of the token to follow the implementation standards for JWTs
-        fetch(`http://localhost:4000/users/details`, {
+        fetch(`https://blogappserver-tag3.onrender.com/users/details`, {
             headers: {
                 Authorization: `Bearer ${ token }`
             }

@@ -20,7 +20,7 @@ export default function EditPost() {
 	useEffect(()=> {
         console.log(postId);
 
-        fetch(`http://localhost:4000/posts/getPost/${postId}`)
+        fetch(`https://blogappserver-tag3.onrender.com/posts/getPost/${postId}`)
         .then(res => res.json())
         .then(data => {
             console.log(data)
@@ -42,7 +42,7 @@ export default function EditPost() {
 	const editPost = (e) => {
 		e.preventDefault();
 
-		fetch(`http://localhost:4000/posts/updatePost/${postId}`,
+		fetch(`https://blogappserver-tag3.onrender.com/posts/updatePost/${postId}`,
 		{
 			method: 'PATCH',
 			headers: {

@@ -14,7 +14,7 @@ export default function DeletePost({post, fetchData}){
 
     const deletePost = () => {
 
-        fetch(`http://localhost:4000/posts/deletePost/${postId}`, {
+        fetch(`https://blogappserver-tag3.onrender.com/posts/deletePost/${postId}`, {
             method: "DELETE",
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("token")}`
@@ -47,7 +47,7 @@ export default function DeletePost({post, fetchData}){
 
     const deletePostAsAdmin = () => {
 
-        fetch(`http://localhost:4000/posts/deletePostAsAdmin/${postId}`, {
+        fetch(`https://blogappserver-tag3.onrender.com/posts/deletePostAsAdmin/${postId}`, {
             method: "DELETE",
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("token")}`

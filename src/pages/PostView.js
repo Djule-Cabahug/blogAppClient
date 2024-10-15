@@ -29,7 +29,7 @@ export default function PostView() {
     useEffect(()=> {
         console.log(postId);
 
-        fetch(`http://localhost:4000/posts/getPost/${postId}`)
+        fetch(`https://blogappserver-tag3.onrender.com/posts/getPost/${postId}`)
         .then(res => res.json())
         .then(data => {
             console.log(data)
@@ -68,7 +68,7 @@ export default function PostView() {
     
     const getComments = () => {
 
-        fetch(`http://localhost:4000/posts/getComments/${postId}`)
+        fetch(`https://blogappserver-tag3.onrender.com/posts/getComments/${postId}`)
         .then(res => res.json())
         .then(data => {
             console.log(data);
@@ -98,7 +98,7 @@ export default function PostView() {
 
         e.preventDefault();
 
-        fetch(`http://localhost:4000/posts/addComment/${postId}`, {
+        fetch(`https://blogappserver-tag3.onrender.com/posts/addComment/${postId}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
@@ -132,7 +132,7 @@ export default function PostView() {
 
     const deleteComment = (postId, commentId) => {
 
-        fetch(`http://localhost:4000/posts/deleteComment/${postId}/${commentId}`, {
+        fetch(`https://blogappserver-tag3.onrender.com/posts/deleteComment/${postId}/${commentId}`, {
             method: "DELETE",
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("token")}`

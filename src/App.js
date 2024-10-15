@@ -32,7 +32,7 @@ function App() {
   }
 
   useEffect(() => {
-    fetch(`http://localhost:4000/users/details`, {
+    fetch(`https://blogappserver-tag3.onrender.com/users/details`, {
       headers: {
         Authorization: `Bearer ${ localStorage.getItem('token') }`
       }

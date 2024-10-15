@@ -22,7 +22,7 @@ export default function Post() {
 
 	const fetchData = () => {
 
-		fetch(`http://localhost:4000/posts/getMyPosts`, {
+		fetch(`https://blogappserver-tag3.onrender.com/posts/getMyPosts`, {
 			headers: {
 				Authorization: `Bearer ${localStorage.getItem('token')}`
 			}

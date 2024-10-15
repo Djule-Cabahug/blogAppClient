@@ -17,7 +17,7 @@ export default function Posts() {
 	const fetchData = () => {
 
 		//headers is included for both /posts/all and /posts/ to allow flexibility even if it is not needed.
-		fetch(`http://localhost:4000/posts/getAllPosts`)
+		fetch(`https://blogappserver-tag3.onrender.com/posts/getAllPosts`)
 		.then(res => res.json())
 		.then(data => {
 
