@@ -62,6 +62,7 @@ export default function Register() {
 
 			if(data.message === "Registered Successfully"){
 				setEmail('');
+				setUsername('');
 				setPassword('');
 				setConfirmPassword('');
 
